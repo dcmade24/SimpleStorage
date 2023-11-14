@@ -12,7 +12,7 @@ contract SimpleStorage {
     Person[] public personList;
     mapping(string => uint256) public nametofn;
 
-    function store(uint256 _fn) public{
+    function store(uint256 _fn) public virtual{
         fn = _fn;
     }
     function retrieve() public view returns(uint256){
@@ -23,3 +23,7 @@ contract SimpleStorage {
         nametofn[_name] = _fn;
     }
 }
+
+contract SimpleStorage2 {}
+contract SimpleStorage3 {}
+contract SimpleStorage4 {}
